@@ -37,11 +37,17 @@ void fill_number()
      */
 }
 
-void move_cursor()
+void move_cursor(char c)
 {
     /* TODO: Move the cursor up, down, to the left or to the right.
              Remember to check if the cursor is moving out of bound.
     */
+    if(c == 'W' || c == 'w'){
+    	cur_r -= 1;
+	}
+    if(c == 'S' || c == 's'){
+    	cur_r += 1;
+	}
 }
 
 bool is_invalid(int i, int j)
@@ -177,7 +183,7 @@ int main()
         if (is_moving_action(c))
         {
             action_ok = true;
-            move_cursor();
+            move_cursor(c);
         }
 
         if (is_filling_action(c))
