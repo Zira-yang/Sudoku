@@ -48,6 +48,12 @@ void move_cursor(char c)
     if(c == 'S' || c == 's'){
     	cur_r += 1;
 	}
+	if(c == 'A' || c == 'a'){
+    	cur_c -= 1;
+	}
+    if(c == 'D' || c == 'd'){
+    	cur_c += 1;
+	}
 }
 
 bool is_invalid(int i, int j)
